@@ -13,5 +13,8 @@ namespace MVC_Aula
           produtoView.Listar(produto.Ler());
       }
       
+      public void Cadastrar(){
+          produto.InserirProduto (produtoView.CadastrarProduto());
+      }
     }
 }

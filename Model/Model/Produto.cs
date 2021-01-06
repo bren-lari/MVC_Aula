@@ -7,7 +7,7 @@ namespace MVC_Aula.Model.Model
 
     public int Codigo { get; set; }
 
-        public string Nome { get; set; }
+        public string Nome{ get; set; }
 
         public float Preco { get; set; }
 
@@ -44,5 +44,19 @@ namespace MVC_Aula.Model.Model
             }
             return produtos;
         }
+
+        public void InserirProduto(Produto produto){
+            string[] linhas = {PreprarLinhaPProduto (produto)};
+
+            File.AppendAllLines(PATH, linhas);
+            
+        }
+
+
+        public string PreprarLinhaPProduto(Produto produto){
+            return $"{produto.Codigo};{produto.Nome};{produto.Preco}";
+        }
+
+
     }
     }
