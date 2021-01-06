@@ -7,6 +7,7 @@ namespace MVC_Aula
     {
         static void Main(string[] args)
         {
+            Console.Clear();
          ProdutoController produto = new ProdutoController();
             produto.ListarProdutos();
         }
